@@ -3,12 +3,13 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 
-import { usePathname } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Navbar = () => {
   const pathname = usePathname();
+  const router = useRouter();
 
   const isChatbotPage =
     pathname === '/chatbot' ||
@@ -33,7 +34,7 @@ const Navbar = () => {
 
       {isChatbotPage && (
         <div className="relative flex flex-col items-center xl:items-start">
-          <div className="relative">
+          <div className="relative" onClick={() => router.push('/')}>
             <Image
               src="/bogdanoff_logo.png"
               alt="Bogdanoff Logo"
@@ -83,20 +84,17 @@ const Navbar = () => {
         onClick={toggleMenu}
       />
 
-      {/* Mobile menu overlay */}
       <div
         className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
           isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       />
 
-      {/* Mobile menu panel */}
       <div
         className={`fixed right-0 top-0 h-full w-full bg-neutral-900 shadow-xl transition-transform duration-300 ease-in-out transform lg:hidden z-[999] ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        {/* Menu header */}
         <div className="flex items-center justify-between p-4">
           <h2 className="opacity-0">Menu</h2>
           <button onClick={toggleMenu} className="text-white">
@@ -116,7 +114,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Menu items */}
         <div className="pt-24 border-t border-gray-800">
           <div className="w-full flex items-center justify-center gap-5">
             <div className="bg-white rounded-md p-2">

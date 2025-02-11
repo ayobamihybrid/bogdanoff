@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 import Tilt from 'react-parallax-tilt';
@@ -36,49 +37,62 @@ const Card: React.FC<CardProps> = ({
   buttonText,
   icons = [],
   status,
-}) => (
-  <Tilt className="relative">
-    {status && <StatusBadge {...status} />}
-    <div
-      className={` bg-white/90 rounded-xl p-3 xl:p-5 flex flex-col justify-between min-h-[13rem] xl:min-h-[17.5rem] ${
-        status ? 'mt-[4.2rem] lg:mt-[5rem] xl:mt-0' : ''
-      }`}
-    >
-      <div className="space-y-2">
-        <p className="text-sm font-mono uppercase">{title}</p>
-        <p className="text-lg font-mono font-bold tracking-wider">{subtitle}</p>
-      </div>
-      <div className="flex justify-between gap-1 items-center">
-        <div className="flex gap-1 xl:gap-2">
-          {icons.map((icon, index) => (
-            <div
-              key={index}
-              className=" bg-black p-1 xl:p-2 flex items-center justify-center"
-            >
-              <Image
-                src={icon}
-                alt=""
-                width={38}
-                height={31}
-                className="w-9 h-9"
-              />
-            </div>
-          ))}
-        </div>
+}) => {
+  const router = useRouter();
 
-        <button
-          className={`px-4 py-2 font-mono text-sm font-bold ${
-            buttonText === 'BUY BOGDANOFF'
-              ? 'bg-yellow-200 text-black py-3 xl:py-4'
-              : 'bg-black text-white'
-          }`}
-        >
-          {buttonText}
-        </button>
+  const handleClick = () => {
+    if (buttonText === 'TIMELINE') {
+      router.push('/timeline');
+    }
+  };
+
+  return (
+    <Tilt className="relative">
+      {status && <StatusBadge {...status} />}
+      <div
+        className={` bg-white/90 rounded-xl p-3 xl:p-5 flex flex-col justify-between min-h-[13rem] xl:min-h-[17.5rem] ${
+          status ? 'mt-[4.2rem] lg:mt-[5rem] xl:mt-0' : ''
+        }`}
+      >
+        <div className="space-y-2">
+          <p className="text-sm font-mono uppercase">{title}</p>
+          <p className="text-lg font-mono font-bold tracking-wider">
+            {subtitle}
+          </p>
+        </div>
+        <div className="flex justify-between gap-1 items-center">
+          <div className="flex gap-1 xl:gap-2">
+            {icons.map((icon, index) => (
+              <div
+                key={index}
+                className=" bg-black p-1 xl:p-2 flex items-center justify-center"
+              >
+                <Image
+                  src={icon}
+                  alt=""
+                  width={38}
+                  height={31}
+                  className="w-9 h-9"
+                />
+              </div>
+            ))}
+          </div>
+
+          <button
+            className={`px-4 py-2 font-mono text-sm font-bold ${
+              buttonText === 'BUY BOGDANOFF'
+                ? 'bg-yellow-200 text-black py-3 xl:py-4'
+                : 'bg-black text-white'
+            }`}
+            onClick={handleClick}
+          >
+            {buttonText}
+          </button>
+        </div>
       </div>
-    </div>
-  </Tilt>
-);
+    </Tilt>
+  );
+};
 
 const CardGrid: React.FC = () => {
   const cards: CardProps[] = [

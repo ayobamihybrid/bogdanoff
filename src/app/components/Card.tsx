@@ -1,5 +1,9 @@
+'use client';
+
 import Image from 'next/image';
 import React from 'react';
+
+import { Tilt } from 'react-tilt';
 
 interface StatusProps {
   status: string;
@@ -33,7 +37,7 @@ const Card: React.FC<CardProps> = ({
   icons = [],
   status,
 }) => (
-  <div className="relative">
+  <Tilt className="relative">
     {status && <StatusBadge {...status} />}
     <div
       className={` bg-white/90 rounded-xl p-3 xl:p-5 flex flex-col justify-between min-h-[13rem] xl:min-h-[17.5rem] ${
@@ -73,7 +77,7 @@ const Card: React.FC<CardProps> = ({
         </button>
       </div>
     </div>
-  </div>
+  </Tilt>
 );
 
 const CardGrid: React.FC = () => {

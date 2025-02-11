@@ -8,7 +8,7 @@ export default function Timeline() {
 
   return (
     <div className="relative flex flex-col items-center bg-gradient-to-b from-green-900 to-gray-900 min-h-screen py-12 px-4">
-      <div className="w-full max-w-3xl">
+      <div className="w-full ">
         <div className="relative border-l-2 border-gray-300 pl-6">
           {events.map((event, index) => (
             <div key={index} className="mb-8 flex flex-col gap-2 relative">

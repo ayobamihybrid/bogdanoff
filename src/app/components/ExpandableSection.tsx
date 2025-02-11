@@ -18,12 +18,10 @@ const ExpandableSection: React.FC<ExpandableProps> = ({
     <div className="w-full text-black">
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full bg-gradient-to-r from-white to-[#d8faff] backdrop-blur-sm rounded-2xl px-4 pt-4 pb-9 flex flex-col gap-2 transition-all duration-300 hover:bg-slate-200/30"
+        className="w-full bg-gradient-to-r from-white to-[#d8faff] backdrop-blur-sm rounded-2xl px-4 pt-2 md:pt-4 pb-6 md:pb-9 flex flex-col gap-2 transition-all duration-300 hover:bg-slate-200/30"
       >
-        <div className="">
-          <div className="text-lg font-bold ">{title}</div>
-        </div>
-        <div className="text-sm text-gray-600">READ MORE</div>
+        <div className="text-sm xl:text-lg font-bold ">{title}</div>
+        <div className="text-xs xl:text-sm text-gray-600">READ MORE</div>
       </button>
 
       <div
@@ -31,8 +29,8 @@ const ExpandableSection: React.FC<ExpandableProps> = ({
           isExpanded ? 'max-h-96 mt-2' : 'max-h-0'
         }`}
       >
-        <div className="bg-gradient-to-r from-white to-[#d8faff] backdrop-blur-sm rounded-2xl p-4">
-          {moreDetail}
+        <div className="bg-gradient-to-r from-white to-[#d8faff] backdrop-blur-sm rounded-2xl px-4 py-6">
+          <p className="text-sm xl:text-lg">{moreDetail}</p>
         </div>
       </div>
     </div>

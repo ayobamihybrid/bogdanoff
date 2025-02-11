@@ -2,6 +2,8 @@ import Image from 'next/image';
 import React from 'react';
 import CardGrid from './Card';
 
+
+
 const Hero = () => {
   return (
     <div className="mt-6 p-4 md:p-8 bg-[url('/bg_img.png')] bg-cover bg-center rounded-t-3xl w-full min-h-screen text-black font-mono">

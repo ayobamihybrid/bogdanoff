@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-import { Tilt } from 'react-tilt';
+import Tilt from 'react-parallax-tilt';
 
 interface StatusProps {
   status: string;

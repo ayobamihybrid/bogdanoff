@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { IBM_Plex_Mono, VT323 } from 'next/font/google';
 import './globals.css';
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 
 const ibmPlexMono = IBM_Plex_Mono({
   variable: '--font-ibm-plex-mono',
@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`md:p-5 bg-black ${ibmPlexMono.variable} ${vt323.variable} antialiased max-w-[125rem] mx-auto`}
       >
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
       </body>
     </html>

@@ -11,33 +11,10 @@ import 'react-vertical-timeline-component/style.min.css';
 
 import { IoIosArrowUp } from 'react-icons/io';
 
-import { experiences } from '../utils';
+import { details, experiences } from '../utils';
+import ClientLayout from '../ClientLayout';
 
 const Page = () => {
-  const details = [
-    {
-      title: 'Origin Protocol',
-      moreDetail:
-        'Our proprietary QMD framework studies ze quantum entanglement between memes and markets. Through careful observation of Wojak emotional states across multiple timelines, we have mapped ze complete taxonomy of market psychology.',
-      list: [
-        "Schrödinger's Gains: Superposition of profit and loss states, Quantum Tunneling through Support Levels,  Wave Function Collapse in Mass Liquidation Events, Timeline Divergence via FUD Propagation",
-      ],
-    },
-    {
-      title: 'Origin Protocol',
-      moreDetail:
-        'Our proprietary QMD framework studies ze quantum entanglement between memes and markets. Through careful observation of Wojak emotional states across multiple timelines, we have mapped ze complete taxonomy of market psychology.',
-    },
-    {
-      title: 'Origin Protocol',
-      moreDetail:
-        'Our proprietary QMD framework studies ze quantum entanglement between memes and markets. Through careful observation of Wojak emotional states across multiple timelines, we have mapped ze complete taxonomy of market psychology.',
-      list: [
-        "Schrödinger's Gains: Superposition of profit and loss states, Quantum Tunneling through Support Levels,  Wave Function Collapse in Mass Liquidation Events, Timeline Divergence via FUD Propagation",
-      ],
-    },
-  ];
-
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
@@ -63,6 +40,8 @@ const Page = () => {
   };
 
   return (
+    <ClientLayout >
+
     <div className="bg-gradient-to-b from-black via-teal-900 to-black min-h-screen px-4 xl:px-8 pb-28">
       <div className="w-full mt-[4rem] xl:mt-[6rem] flex flex-col lg:flex-row items-start justify-center gap-5 ">
         {details.map((detail, index) => (
@@ -109,6 +88,8 @@ const Page = () => {
         </button>
       )}
     </div>
+    </ClientLayout>
+
   );
 };
 

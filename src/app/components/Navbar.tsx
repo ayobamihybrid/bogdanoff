@@ -2,10 +2,10 @@
 
 import Image from 'next/image';
 import React, { useState } from 'react';
-
 import { useRouter, usePathname } from 'next/navigation';
-
 import { GiHamburgerMenu } from 'react-icons/gi';
+
+import { useMetamask, useAddress, useDisconnect } from '@thirdweb-dev/react';
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -18,8 +18,22 @@ const Navbar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Thirdweb hooks
+  const connectWithMetamask = useMetamask();
+  const address = useAddress();
+  const disconnectWallet = useDisconnect();
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleConnect = () => {
+    if (address) {
+      disconnectWallet();
+    } else {
+      connectWithMetamask();
+    }
+    setIsMenuOpen(false); // Close the menu after connecting/disconnecting
   };
 
   return (
@@ -73,8 +87,11 @@ const Navbar = () => {
           />
         </div>
 
-        <button className="hidden xl:block bg-white rounded-3xl px-4 py-2 xl:px-7 text-xs xl:text-sm font-medium ">
-          CONNECT
+        <button
+          className="hidden xl:block bg-white rounded-3xl px-4 py-2 xl:px-7 text-xs xl:text-sm font-medium"
+          onClick={handleConnect}
+        >
+          {address ? `DISCONNECT (${address.slice(0, 6)}...)` : 'CONNECT'}
         </button>
       </div>
 
@@ -122,7 +139,7 @@ const Navbar = () => {
                 alt=""
                 width={38}
                 height={31}
-                className="w-[1.5rem] h-[1.3rem]"
+                className="w-[1.5rem] h-[1.3rem] md:h-[1.5rem]"
               />
             </div>
 
@@ -132,17 +149,15 @@ const Navbar = () => {
                 alt=""
                 width={38}
                 height={31}
-                className="w-[1.5rem] h-[1.3rem]"
+                className="w-[1.5rem] h-[1.3rem] md:h-[1.5rem]"
               />
             </div>
 
             <button
-              className=" bg-white font-instrument text-lg text-black font-medium px-3 md:px-6 py-1 md:py-2 rounded-lg transition-colors duration-200"
-              onClick={() => {
-                setIsMenuOpen(!isMenuOpen);
-              }}
+              className="bg-white font-instrument text-lg text-black font-medium px-3 md:px-6 py-1 md:py-2 rounded-lg transition-colors duration-200"
+              onClick={handleConnect}
             >
-              Connect
+              {address ? `DISCONNECT (${address.slice(0, 6)}...)` : 'CONNECT'}
             </button>
           </div>
         </div>

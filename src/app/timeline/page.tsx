@@ -63,7 +63,7 @@ const Page = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-black via-teal-900 to-black min-h-screen px-4 pb-28">
+    <div className="bg-gradient-to-b from-black via-teal-900 to-black min-h-screen px-4 xl:px-8 pb-28">
       <div className="w-full mt-[4rem] xl:mt-[6rem] flex flex-col lg:flex-row items-start justify-center gap-5 ">
         {details.map((detail, index) => (
           <ExpandableSection

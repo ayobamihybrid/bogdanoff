@@ -23,7 +23,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full flex items-center justify-between p-2 text-black font-mono">
+    <div className="w-full flex items-center justify-between p-2 xl:py-4 xl:px-8 text-black font-mono">
       {isChatbotPage ? (
         <button className="hidden xl:block bg-white py-2 px-6 rounded-3xl text-sm font-bold">
           {'<'} BACK TO MAIN
@@ -85,13 +85,13 @@ const Navbar = () => {
       />
 
       <div
-        className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 xl:hidden ${
           isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       />
 
       <div
-        className={`fixed right-0 top-0 h-full w-full bg-neutral-900 shadow-xl transition-transform duration-300 ease-in-out transform lg:hidden z-[999] ${
+        className={`fixed right-0 top-0 h-full w-full bg-neutral-900 shadow-xl transition-transform duration-300 ease-in-out transform xl:hidden z-[999] ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -122,7 +122,7 @@ const Navbar = () => {
                 alt=""
                 width={38}
                 height={31}
-                className="w-[1.5rem] h-[1.4rem]"
+                className="w-[1.5rem] h-[1.3rem]"
               />
             </div>
 
@@ -132,7 +132,7 @@ const Navbar = () => {
                 alt=""
                 width={38}
                 height={31}
-                className="w-[1.5rem] h-[1.4rem]"
+                className="w-[1.5rem] h-[1.3rem]"
               />
             </div>
 

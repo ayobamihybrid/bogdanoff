@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`p-3 md:p-5 ${ibmPlexMono.variable} ${vt323.variable} antialiased max-w-[125rem] mx-auto`}
+        className={`md:p-5 ${ibmPlexMono.variable} ${vt323.variable} antialiased max-w-[125rem] mx-auto`}
       >
         <Navbar />
         {children}

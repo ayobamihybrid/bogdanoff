@@ -117,19 +117,37 @@ const Navbar = () => {
         </div>
 
         {/* Menu items */}
-        <div className="p-4 space-y-4 xl:hidden">
-          <div className="pt-4 space-y-2 border-t border-gray-800"></div>
-        </div>
+        <div className="pt-24 border-t border-gray-800">
+          <div className="w-full flex items-center justify-center gap-5">
+            <div className="bg-white rounded-md p-2">
+              <Image
+                src="/telegram_icon.svg"
+                alt=""
+                width={38}
+                height={31}
+                className="w-[1.5rem] h-[1.4rem]"
+              />
+            </div>
 
-        <div className="mt-9 w-full flex justify-center">
-          <button
-            className=" bg-white font-instrument text-lg text-black font-medium px-3 md:px-6 py-1 md:py-2 rounded-lg transition-colors duration-200"
-            onClick={() => {
-              setIsMenuOpen(!isMenuOpen);
-            }}
-          >
-            Connect
-          </button>
+            <div className="bg-white rounded-md p-2">
+              <Image
+                src="/twitter_icon.svg"
+                alt=""
+                width={38}
+                height={31}
+                className="w-[1.5rem] h-[1.4rem]"
+              />
+            </div>
+
+            <button
+              className=" bg-white font-instrument text-lg text-black font-medium px-3 md:px-6 py-1 md:py-2 rounded-lg transition-colors duration-200"
+              onClick={() => {
+                setIsMenuOpen(!isMenuOpen);
+              }}
+            >
+              Connect
+            </button>
+          </div>
         </div>
       </div>
     </div>

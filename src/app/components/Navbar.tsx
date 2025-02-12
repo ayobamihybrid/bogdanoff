@@ -51,7 +51,10 @@ const Navbar = () => {
 
       {isChatbotPage && (
         <div className="relative flex flex-col items-center xl:items-start">
-          <div className="relative cursor-pointer" onClick={() => router.push('/')}>
+          <div
+            className="relative cursor-pointer"
+            onClick={() => router.push('/')}
+          >
             <Image
               src="/bogdanoff_logo.png"
               alt="Bogdanoff Logo"
@@ -160,7 +163,7 @@ const Navbar = () => {
               className="bg-white font-instrument text-lg text-black font-medium px-3 md:px-6 py-1 md:py-2 rounded-lg transition-colors duration-200"
               onClick={handleConnect}
             >
-              {address ? `DISCONNECT (${address.slice(0, 6)}...)` : 'CONNECT'}
+              {address ? `(${address.slice(0, 6)}...)` : 'CONNECT'}
             </button>
           </div>
         </div>

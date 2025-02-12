@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 
 interface ExpandableProps {
   title: string;
@@ -9,6 +11,30 @@ interface ExpandableProps {
   sectionType?: 'research' | 'academic';
 }
 
+// Custom hook for window width
+const useWindowWidth = () => {
+  const [width, setWidth] = useState<number>(1280); // Default to desktop size
+
+  useEffect(() => {
+    // Set initial width
+    setWidth(window.innerWidth);
+
+    // Handle resize
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  return width;
+};
+
 const ExpandableSection: React.FC<ExpandableProps> = ({
   title,
   moreDetail,
@@ -18,9 +44,10 @@ const ExpandableSection: React.FC<ExpandableProps> = ({
   sectionType,
 }) => {
   const [isMobileExpanded, setIsMobileExpanded] = useState(false);
+  const windowWidth = useWindowWidth();
+  const isMobile = windowWidth < 1280;
 
   const handleClick = () => {
-    const isMobile = window.innerWidth < 1280;
     if (isMobile) {
       setIsMobileExpanded(!isMobileExpanded);
     } else if (setIsExpanded) {
@@ -28,8 +55,7 @@ const ExpandableSection: React.FC<ExpandableProps> = ({
     }
   };
 
-  const shouldExpand =
-    window.innerWidth >= 1280 ? isExpanded : isMobileExpanded;
+  const shouldExpand = isMobile ? isMobileExpanded : isExpanded;
 
   return (
     <div className="w-full text-black font-mono">

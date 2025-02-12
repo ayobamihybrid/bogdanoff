@@ -22,7 +22,7 @@ export const details = [
   },
 ];
 
-export const experiences = [
+export const timelines = [
   {
     title: 'BOGDANOFF TWINS EMERGED FROM QUANTUM FOAM',
     iconBg: '#383E56',

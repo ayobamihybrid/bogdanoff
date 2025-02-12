@@ -21,7 +21,7 @@ const ExpandableSection: React.FC<ExpandableProps> = ({
         className="w-full bg-gradient-to-r from-white to-[#d8faff] backdrop-blur-md cursor-pointer rounded-2xl px-4 pt-2 md:pt-4 pb-6 md:pb-9 flex flex-col gap-2 transition-all duration-300 hover:bg-white"
         style={{
           boxShadow:
-            '0 0 30px 5px rgba(255, 255, 255, 0.5), 0 0 60px 10px rgba(240, 255, 253, 0.3)',
+            '0 0 25px 3px rgba(255, 255, 255, 0.4), 0 0 50px 6px rgba(240, 255, 253, 0.2)',
         }}
       >
         <div className="text-sm xl:text-lg font-bold ">{title}</div>

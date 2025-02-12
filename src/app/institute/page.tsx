@@ -26,7 +26,7 @@ const Page = () => {
             />
           </div>
 
-          <div className="w-full xl:w-[35%] h-auto xl:h-[35rem] bg-gradient-to-r from-white to-[#d8faff] backdrop-blur-sm rounded-2xl text-black flex flex-col gap-12 items-center justify-center py-4 px-7 xl:px-12 text-sm xl:text-lg font-source-sans-pro">
+          <div className="w-full xl:w-[35%] h-auto xl:h-[35rem] bg-gradient-to-r from-white to-[#d8faff] backdrop-blur-sm rounded-2xl text-black flex flex-col gap-12 items-center justify-center py-4 px-7 xl:px-12 text-sm md:text-lg font-source-sans-pro">
             <p>
               Welcome to ze pinnacle of quantum-memetic research. At ze
               Bogdanoff Institute, we&#39;ve transcended traditional market
@@ -47,7 +47,7 @@ const Page = () => {
         </div>
 
         <div className="w-full mt-[4rem] xl:mt-[6rem]">
-          <div className="w-full mb-1 flex flex-col items-end justify-end text-sm xl:text-lg font-mono">
+          <div className="w-full mb-1 flex flex-col items-end justify-end text-sm md:text-lg font-mono">
             <p className="text-gray-500">{'//'} RESEARCH</p>
             <p> PILLARS</p>
           </div>

@@ -11,22 +11,18 @@ interface ExpandableProps {
   sectionType?: 'research' | 'academic';
 }
 
-// Custom hook for window width
 const useWindowWidth = () => {
-  const [width, setWidth] = useState<number>(1280); // Default to desktop size
+  const [width, setWidth] = useState<number>(1280);
 
   useEffect(() => {
-    // Set initial width
     setWidth(window.innerWidth);
 
-    // Handle resize
     const handleResize = () => {
       setWidth(window.innerWidth);
     };
 
     window.addEventListener('resize', handleResize);
 
-    // Cleanup
     return () => {
       window.removeEventListener('resize', handleResize);
     };

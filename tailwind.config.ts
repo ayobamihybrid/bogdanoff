@@ -15,6 +15,7 @@ export default {
       fontFamily: {
         mono: ['var(--font-ibm-plex-mono)'],
         vt323: ['var(--font-vt323)'],
+        'source-sans-pro': ['var(--font-source-sans-pro)'],
       },
     },
   },

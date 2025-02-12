@@ -1,10 +1,17 @@
+'use client';
+
 import Image from 'next/image';
-import React from 'react';
-import { details } from '../utils';
+import React, { useState } from 'react';
+import { details, details2 } from '../utils';
 import ExpandableSection from '../components/ExpandableSection';
 import ClientLayout from '../ClientLayout';
 
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
+
 const Page = () => {
+  const [isResearchExpanded, setIsResearchExpanded] = useState(false);
+  const [isAcademicExpanded, setIsAcademicExpanded] = useState(false);
+
   return (
     <ClientLayout>
       <div className="w-full px-2 xl:px-4 pb-9">
@@ -19,7 +26,7 @@ const Page = () => {
             />
           </div>
 
-          <div className="w-full xl:w-[65%] h-auto xl:h-[35rem] bg-gradient-to-r from-white to-[#d8faff] backdrop-blur-sm rounded-2xl text-black flex flex-col gap-12 items-center justify-center py-4 px-7 xl:px-12 text-sm xl:text-lg">
+          <div className="w-full xl:w-[35%] h-auto xl:h-[35rem] bg-gradient-to-r from-white to-[#d8faff] backdrop-blur-sm rounded-2xl text-black flex flex-col gap-12 items-center justify-center py-4 px-7 xl:px-12 text-sm xl:text-lg font-source-sans-pro">
             <p>
               Welcome to ze pinnacle of quantum-memetic research. At ze
               Bogdanoff Institute, we&#39;ve transcended traditional market
@@ -33,27 +40,42 @@ const Page = () => {
               and timeline manipulation.
             </p>
 
-            <button className=" mt-9 bg-black min-w-[17rem] p-2 text-white">
+            <button className=" mt-9 bg-black w-full p-2 text-white">
               BUY $BOGDANOFF
             </button>
           </div>
         </div>
 
         <div className="w-full mt-[4rem] xl:mt-[6rem]">
-          <div className="w-full mb-1 flex flex-col items-end justify-end text-sm xl:text-lg ">
+          <div className="w-full mb-1 flex flex-col items-end justify-end text-sm xl:text-lg font-mono">
             <p className="text-gray-500">{'//'} RESEARCH</p>
             <p> PILLARS</p>
           </div>
 
-          <div className="w-full flex flex-col lg:flex-row items-start justify-center gap-5 ">
+          <div className="w-full flex flex-col xl:flex-row items-start justify-center gap-6 md:gap-[2rem] 2xl:gap-[3rem] ">
             {details.map((detail, index) => (
               <ExpandableSection
                 key={index}
                 title={detail.title}
                 moreDetail={detail.moreDetail}
                 list={detail?.list}
+                isExpanded={isResearchExpanded}
+                setIsExpanded={setIsResearchExpanded}
+                sectionType="research"
               />
             ))}
+          </div>
+
+          <div
+            className="hidden mt-9 w-full xl:flex justify-center items-center gap-2 text-white cursor-pointer"
+            onClick={() => setIsResearchExpanded(!isResearchExpanded)}
+          >
+            <p>{isResearchExpanded ? 'SEE LESS' : 'CLICK HERE TO EXPAND'}</p>
+            {isResearchExpanded ? (
+              <IoIosArrowUp size={22} />
+            ) : (
+              <IoIosArrowDown size={22} />
+            )}
           </div>
         </div>
 
@@ -63,15 +85,30 @@ const Page = () => {
             <p> PROGRAMS & RESEARCH</p>
           </div>
 
-          <div className="w-full flex flex-col lg:flex-row items-start justify-center gap-5 ">
-            {details.map((detail, index) => (
+          <div className="w-full flex flex-col xl:flex-row items-start justify-center gap-6 md:gap-[2rem] 2xl:gap-[3rem]  ">
+            {details2.map((detail, index) => (
               <ExpandableSection
                 key={index}
                 title={detail.title}
                 moreDetail={detail.moreDetail}
                 list={detail?.list}
+                isExpanded={isAcademicExpanded}
+                setIsExpanded={setIsAcademicExpanded}
+                sectionType="academic"
               />
             ))}
+          </div>
+
+          <div
+            className="hidden mt-9 w-full xl:flex justify-center items-center gap-2 text-white cursor-pointer"
+            onClick={() => setIsAcademicExpanded(!isAcademicExpanded)}
+          >
+            <p>{isAcademicExpanded ? 'SEE LESS' : 'CLICK HERE TO EXPAND'}</p>
+            {isAcademicExpanded ? (
+              <IoIosArrowUp size={22} />
+            ) : (
+              <IoIosArrowDown size={22} />
+            )}
           </div>
         </div>
       </div>

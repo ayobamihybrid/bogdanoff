@@ -3,7 +3,7 @@ import { timelines } from '../utils';
 
 const TimelineTable = () => {
   return (
-    <div className="relative w-full max-w-4xl mx-auto py-10">
+    <div className="relative w-full max-w-4xl mx-auto py-10 font-mono">
       <div className="absolute left-1/2 top-0 w-1 bg-gray-300 h-full transform -translate-x-1/2"></div>
 
       {timelines.map((event, index) => (
@@ -20,7 +20,11 @@ const TimelineTable = () => {
               index % 2 === 0 ? 'ml-auto' : 'mr-auto'
             }`}
           >
-            <p className="w-fit mb-2 text-xs px-3 md:px-7 py-1 bg-white text-black rounded-full">
+            <p
+              className={`w-fit mb-2 text-xs px-3 md:px-7 py-1 rounded-full ${
+                index < 2 ? 'bg-white text-black' : 'bg-black text-white'
+              }`}
+            >
               {event.date}
             </p>
             <h3 className="text-sm md:text-lg font-bold">{event.title}</h3>

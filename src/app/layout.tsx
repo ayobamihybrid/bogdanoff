@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
-import { IBM_Plex_Mono, VT323 } from 'next/font/google';
+import { IBM_Plex_Mono, VT323, Source_Sans_3 } from 'next/font/google';
 import './globals.css';
-// import Navbar from './components/Navbar';
 
 const ibmPlexMono = IBM_Plex_Mono({
   variable: '--font-ibm-plex-mono',
@@ -13,6 +12,12 @@ const vt323 = VT323({
   variable: '--font-vt323',
   subsets: ['latin'],
   weight: ['400'],
+});
+
+const sourceSansPro = Source_Sans_3({
+  variable: '--font-source-sans-pro',
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
 });
 
 export const metadata: Metadata = {
@@ -28,9 +33,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`md:p-5 bg-black ${ibmPlexMono.variable} ${vt323.variable} antialiased max-w-[125rem] mx-auto`}
+        className={`md:p-5 bg-black ${ibmPlexMono.variable} ${vt323.variable} ${sourceSansPro.variable} antialiased max-w-[125rem] mx-auto`}
       >
-        {/* <Navbar /> */}
         {children}
       </body>
     </html>

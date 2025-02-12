@@ -9,7 +9,7 @@ import ExpandableSection from '../components/ExpandableSection';
 // } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-import { IoIosArrowUp } from 'react-icons/io';
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 
 import { details } from '../utils';
 import ClientLayout from '../ClientLayout';
@@ -17,6 +17,8 @@ import TimelineTable from '../components/TimelineTable';
 
 const Page = () => {
   const [isVisible, setIsVisible] = useState(false);
+
+  const [isResearchExpanded, setIsResearchExpanded] = useState(false);
 
   const toggleVisibility = () => {
     if (window.pageYOffset > 300) {
@@ -43,15 +45,29 @@ const Page = () => {
   return (
     <ClientLayout>
       <div className="bg-gradient-to-b from-black via-teal-900 to-black min-h-screen px-4 xl:px-8 pb-28">
-        <div className="w-full mt-[4rem] xl:mt-[6rem] flex flex-col lg:flex-row items-start justify-center gap-5 ">
+        <div className="w-full mt-[4rem] xl:mt-[6rem] flex flex-col lg:flex-row items-start justify-center gap-6 md:gap-[2rem] 2xl:gap-[3rem]  ">
           {details.map((detail, index) => (
             <ExpandableSection
               key={index}
               title={detail.title}
               moreDetail={detail.moreDetail}
               list={detail?.list}
+              isExpanded={isResearchExpanded}
+              setIsExpanded={setIsResearchExpanded}
             />
           ))}
+        </div>
+
+        <div
+          className="hidden mt-9 w-full xl:flex justify-center items-center gap-2 text-white cursor-pointer"
+          onClick={() => setIsResearchExpanded(!isResearchExpanded)}
+        >
+          <p>{isResearchExpanded ? 'SEE LESS' : 'CLICK HERE TO EXPAND'}</p>
+          {isResearchExpanded ? (
+            <IoIosArrowUp size={22} />
+          ) : (
+            <IoIosArrowDown size={22} />
+          )}
         </div>
 
         <div className="mt-16 xl:mt-32 flex flex-col">
@@ -82,7 +98,7 @@ const Page = () => {
         {isVisible && (
           <button
             onClick={scrollToTop}
-            className="fixed bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1 p-3 bg-white text-black rounded-full shadow-lg hover:bg-gray-100 transition-all duration-300 z-50"
+            className="fixed bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1 p-3 bg-white text-black rounded-full shadow-lg hover:bg-gray-100 transition-all duration-300 z-50 font-momo"
             aria-label="Scroll to top"
           >
             <IoIosArrowUp className="h-3 w-3 xl:w-6 xl:h-6 " />

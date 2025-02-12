@@ -39,7 +39,10 @@ const Navbar = () => {
   return (
     <div className="w-full flex items-center justify-between p-2 xl:py-4 xl:px-8 text-black font-mono">
       {isChatbotPage ? (
-        <button className="hidden xl:block bg-white py-2 px-6 rounded-3xl text-sm font-bold">
+        <button
+          className="hidden xl:block bg-white py-2 px-6 rounded-3xl text-sm font-bold"
+          onClick={() => router.push('/')}
+        >
           {'<'} BACK TO MAIN
         </button>
       ) : (
@@ -48,7 +51,7 @@ const Navbar = () => {
 
       {isChatbotPage && (
         <div className="relative flex flex-col items-center xl:items-start">
-          <div className="relative" onClick={() => router.push('/')}>
+          <div className="relative cursor-pointer" onClick={() => router.push('/')}>
             <Image
               src="/bogdanoff_logo.png"
               alt="Bogdanoff Logo"

@@ -94,7 +94,7 @@ const Navbar = () => {
         </div>
 
         <button
-          className="hidden xl:block bg-white rounded-3xl px-4 py-2 xl:px-7 text-xs xl:text-sm font-medium"
+          className="hidden xl:block bg-white rounded-3xl px-4 py-2 xl:px-7 xl:py-[0.68rem] text-xs xl:text-sm font-medium"
           onClick={handleConnect}
         >
           {address ? `DISCONNECT (${address.slice(0, 6)}...)` : 'CONNECT'}

@@ -18,10 +18,10 @@ const ExpandableSection: React.FC<ExpandableProps> = ({
     <div className="w-full text-black">
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full bg-gradient-to-r from-white to-[#d8faff] backdrop-blur-md cursor-pointer rounded-2xl px-4 pt-2 md:pt-4 pb-6 md:pb-9 flex flex-col gap-2 transition-all duration-300 hover:bg-white"
+        className="w-full bg-gradient-to-r from-white to-[#d8faff] backdrop-blur-sm cursor-pointer rounded-2xl px-4 pt-2 md:pt-4 pb-6 md:pb-9 flex flex-col gap-2 transition-all duration-300 hover:bg-white"
         style={{
           boxShadow:
-            '0 0 25px 3px rgba(255, 255, 255, 0.4), 0 0 50px 6px rgba(240, 255, 253, 0.2)',
+            '0 0 20px 3px rgba(255, 255, 255, 0.4), 0 0 40px 6px rgba(240, 255, 253, 0.2)',
         }}
       >
         <div className="text-sm xl:text-lg font-bold ">{title}</div>

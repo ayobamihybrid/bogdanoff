@@ -13,7 +13,7 @@ const TimelineTable = () => {
             index % 2 === 0 ? 'justify-start' : 'justify-end'
           }`}
         >
-          <div className="absolute left-1/2 w-4 h-4 bg-white border-2 border-gray-600 rounded-full transform -translate-x-1/2"></div>
+          <div className="absolute left-1/2 w-5 h-5 md:w-7 md:h-7 bg-white border-2 border-gray-600 rounded-full transform -translate-x-1/2"></div>
 
           <div
             className={`relative w-5/12 p-2 md:p-4 text-white rounded-xl ${

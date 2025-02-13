@@ -21,7 +21,7 @@ const TimelineTable = () => {
             }`}
           >
             <p
-              className={`w-fit mb-2 text-xs px-3 md:px-7 py-1 rounded-full ${
+              className={`w-fit mb-2 text-xs px-3 md:px-7 py-1 rounded-full font-bold ${
                 index < 2 ? 'bg-white text-black' : 'bg-black text-white'
               }`}
             >

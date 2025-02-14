@@ -5,10 +5,10 @@ import Hero from './components/Hero';
 
 export default function Home() {
   return (
-    <ClientLayout>
-      <div className="w-full">
+    <div className="h-full w-full overflow-y-auto xl:overflow-hidden">
+      <ClientLayout>
         <Hero />
-      </div>
-    </ClientLayout>
+      </ClientLayout>
+    </div>
   );
 }

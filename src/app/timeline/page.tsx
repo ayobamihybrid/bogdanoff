@@ -11,7 +11,7 @@ import 'react-vertical-timeline-component/style.min.css';
 
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 
-import { details } from '../utils';
+import { details3 } from '../utils';
 import ClientLayout from '../ClientLayout';
 import TimelineTable from '../components/TimelineTable';
 
@@ -44,14 +44,14 @@ const Page = () => {
 
   return (
     <ClientLayout>
-      <div className="bg-gradient-to-b from-black via-teal-900 to-black min-h-screen px-4 xl:px-8 pb-28">
+      <div className="bg-gradient-to-b from-black via-teal-900 to-black min-h-screen px-4 xl:px-8 pb-28 font-mono text-sm">
         <div className="w-full mt-[4rem] xl:mt-[6rem] flex flex-col lg:flex-row items-start justify-center gap-6 md:gap-[2rem] 2xl:gap-[3rem]  ">
-          {details.map((detail, index) => (
+          {details3.map((detail, index) => (
             <ExpandableSection
               key={index}
               title={detail.title}
+              imageSource={detail.imageSource}
               moreDetail={detail.moreDetail}
-              list={detail?.list}
               isExpanded={isResearchExpanded}
               setIsExpanded={setIsResearchExpanded}
             />

@@ -31,9 +31,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <body
-        className={`md:p-5 bg-black ${ibmPlexMono.variable} ${vt323.variable} ${sourceSansPro.variable} antialiased max-w-[125rem] mx-auto`}
+        className={`h-full md:p-5 bg-black ${ibmPlexMono.variable} ${vt323.variable} ${sourceSansPro.variable} antialiased max-w-[125rem] mx-auto`}
       >
         {children}
       </body>

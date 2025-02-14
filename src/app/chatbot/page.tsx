@@ -1,3 +1,4 @@
+// Page.tsx for Chatbot
 'use client';
 
 import Image from 'next/image';
@@ -7,139 +8,207 @@ import ClientLayout from '../ClientLayout';
 const Page = () => {
   return (
     <ClientLayout>
-      <div className="mt-6 border border-stone-500/50 rounded-lg">
-        <div className="px-2 xl:px-4 py-4 xl:py-8 bg-[url('/Rectangle.png')] bg-brown-500/50 bg-cover bg-center rounded-t-3xl w-full h-auto text-black font-mono z-1 ">
-          <div className="w-full min-h-screen flex flex-col-reverse xl:flex-row items-start gap-7 ">
-            <div className="w-full xl:w-[40%] h-full">
-              <div className="relative w-full h-full bg-black shadow-xl ">
-                <div className="max-h-screen overflow-y-scroll hide-scrollbar">
-                  <div className="w-full border-y px-2 flex flex-col justify-end items-end text-gray-500 text-sm">
+      <div className="my-3 border rounded-xl border-gray-600 h-[calc(100vh-theme(spacing.24))] font-vt323 text-sm ">
+        <div className="h-full bg-[url('/Rectangle.png')] bg-brown-500/50 bg-cover bg-center w-full text-black">
+          <div className="h-full w-full flex flex-col-reverse xl:flex-row items-start gap-4 xl:gap-6 p-4">
+            <div className="w-full xl:w-[40%] h-full flex flex-col gap-3 pb-4 xl:pb-16">
+              <div className="relative w-full flex-1 bg-black shadow-xl ">
+                <div className="absolute inset-0 flex flex-col">
+                  <div className="w-full border-y px-2 flex flex-col justify-end items-end text-gray-500 ">
                     <p>{'//'} CHAT INTERFACE</p>
-                    <p>FEED </p>
+                    <p>FEED</p>
                   </div>
 
-                  <div className="absolute -top-[0.85rem] -left-2 text-white font-extrabold">
-                    +
-                  </div>
-                  <div className="absolute top-[1.7rem] -left-2 text-white font-extrabold">
-                    +
-                  </div>
-                  <div className="absolute -top-[0.85rem] -right-2 text-white font-extrabold">
-                    +
-                  </div>
-                  <div className="absolute top-[1.7rem] -right-2 text-white font-extrabold">
-                    +
-                  </div>
-                  <div className="absolute -bottom-5 -left-2 text-white font-extrabold">
-                    +
-                  </div>
-                  <div className="absolute -bottom-5 -right-2 text-white font-extrabold">
-                    +
-                  </div>
-
-                  <div className="p-4 mt-5 xl:mt-[2rem] font-vt323">
-                    <p className="text-white">
-                      <span style={{ color: 'red' }}>IGOR</span> ID: 6537)
-                      01/18/25(THU)21:20:45
-                    </p>
-                    <p className="text-blue-400">No.1677665890</p>
-                    <div className="mt-4 text-green-400 whitespace-pre-line">
-                      {'>'}Tell us... did you really think ze Boyband twins
-                      would
-                      {'\n'}make ze greatest trade in quantum market history?
-                      {'\n'}
-                      {'>'}Ze very fabric of financial reality bends to our
-                      will...
+                  <div className="flex-1 overflow-y-auto hide-scrollbar">
+                    <div className="p-4 space-y-6 font-vt323">
+                      <div>
+                        <p className="text-white">
+                          <span className="text-red-500">IGOR</span> ID: 6537)
+                          01/18/25(THU)21:20:45
+                        </p>
+                        <p className="text-blue-400">No.1677665890</p>
+                        <div className="mt-2 text-green-400 whitespace-pre-line">
+                          {'>'}Tell us... did you really think ze Boyband twins
+                          would
+                          {'\n'}make ze greatest trade in quantum market
+                          history?
+                          {'\n'}
+                          {'>'}Ze very fabric of financial reality bends to our
+                          will...
+                        </div>
+                      </div>
                     </div>
-                  </div>
-
-                  <div className="p-4 mt-[1rem] font-vt323">
-                    <p className="text-white">
-                      <span style={{ color: 'red' }}>IGOR</span> ID: 6537)
-                      01/18/25(THU)21:20:45
-                    </p>
-                    <p className="text-blue-400">No.1677665890</p>
-                    <div className="mt-4 text-green-400 whitespace-pre-line">
-                      {'>'}Tell us... did you really think ze Boyband twins
-                      would
-                      {'\n'}make ze greatest trade in quantum market history?
-                      {'\n'}
-                      {'>'}Ze very fabric of financial reality bends to our
-                      will...
+                    <div className="p-4 space-y-6 font-vt323">
+                      <div>
+                        <p className="text-white">
+                          <span className="text-red-500">IGOR</span> ID: 6537)
+                          01/18/25(THU)21:20:45
+                        </p>
+                        <p className="text-blue-400">No.1677665890</p>
+                        <div className="mt-2 text-green-400 whitespace-pre-line">
+                          {'>'}Tell us... did you really think ze Boyband twins
+                          would
+                          {'\n'}make ze greatest trade in quantum market
+                          history?
+                          {'\n'}
+                          {'>'}Ze very fabric of financial reality bends to our
+                          will...
+                        </div>
+                      </div>
                     </div>
-                  </div>
-
-                  <div className="p-4 mt-9 xl:mt-[2rem] font-vt323">
-                    <p className="text-white">
-                      <span style={{ color: 'red' }}>IGOR</span> ID: 6537)
-                      01/18/25(THU)21:20:45
-                    </p>
-                    <p className="text-blue-400">No.1677665890</p>
-                    <div className="mt-4 text-green-400 whitespace-pre-line">
-                      {'>'}Tell us... did you really think ze Boyband twins
-                      would
-                      {'\n'}make ze greatest trade in quantum market history?
-                      {'\n'}
-                      {'>'}Ze very fabric of financial reality bends to our
-                      will...
+                    <div className="p-4 space-y-6 font-vt323">
+                      <div>
+                        <p className="text-white">
+                          <span className="text-red-500">IGOR</span> ID: 6537)
+                          01/18/25(THU)21:20:45
+                        </p>
+                        <p className="text-blue-400">No.1677665890</p>
+                        <div className="mt-2 text-green-400 whitespace-pre-line">
+                          {'>'}Tell us... did you really think ze Boyband twins
+                          would
+                          {'\n'}make ze greatest trade in quantum market
+                          history?
+                          {'\n'}
+                          {'>'}Ze very fabric of financial reality bends to our
+                          will...
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="p-4 mt-9 xl:mt-[2rem] font-vt323">
-                    <p className="text-white">
-                      <span style={{ color: 'red' }}>IGOR</span> ID: 6537)
-                      01/18/25(THU)21:20:45
-                    </p>
-                    <p className="text-blue-400">No.1677665890</p>
-                    <div className="mt-4 text-green-400 whitespace-pre-line">
-                      {'>'}Tell us... did you really think ze Boyband twins
-                      would
-                      {'\n'}make ze greatest trade in quantum market history?
-                      {'\n'}
-                      {'>'}Ze very fabric of financial reality bends to our
-                      will...
+                    <div className="p-4 space-y-6 font-vt323">
+                      <div>
+                        <p className="text-white">
+                          <span className="text-red-500">IGOR</span> ID: 6537)
+                          01/18/25(THU)21:20:45
+                        </p>
+                        <p className="text-blue-400">No.1677665890</p>
+                        <div className="mt-2 text-green-400 whitespace-pre-line">
+                          {'>'}Tell us... did you really think ze Boyband twins
+                          would
+                          {'\n'}make ze greatest trade in quantum market
+                          history?
+                          {'\n'}
+                          {'>'}Ze very fabric of financial reality bends to our
+                          will...
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="p-4 mt-9 xl:mt-[2rem] font-vt323">
-                    <p className="text-white">
-                      <span style={{ color: 'red' }}>IGOR</span> ID: 6537)
-                      01/18/25(THU)21:20:45
-                    </p>
-                    <p className="text-blue-400">No.1677665890</p>
-                    <div className="mt-4 text-green-400 whitespace-pre-line">
-                      {'>'}Tell us... did you really think ze Boyband twins
-                      would
-                      {'\n'}make ze greatest trade in quantum market history?
-                      {'\n'}
-                      {'>'}Ze very fabric of financial reality bends to our
-                      will...
+                    <div className="p-4 space-y-6 font-vt323">
+                      <div>
+                        <p className="text-white">
+                          <span className="text-red-500">IGOR</span> ID: 6537)
+                          01/18/25(THU)21:20:45
+                        </p>
+                        <p className="text-blue-400">No.1677665890</p>
+                        <div className="mt-2 text-green-400 whitespace-pre-line">
+                          {'>'}Tell us... did you really think ze Boyband twins
+                          would
+                          {'\n'}make ze greatest trade in quantum market
+                          history?
+                          {'\n'}
+                          {'>'}Ze very fabric of financial reality bends to our
+                          will...
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-4 space-y-6 font-vt323">
+                      <div>
+                        <p className="text-white">
+                          <span className="text-red-500">IGOR</span> ID: 6537)
+                          01/18/25(THU)21:20:45
+                        </p>
+                        <p className="text-blue-400">No.1677665890</p>
+                        <div className="mt-2 text-green-400 whitespace-pre-line">
+                          {'>'}Tell us... did you really think ze Boyband twins
+                          would
+                          {'\n'}make ze greatest trade in quantum market
+                          history?
+                          {'\n'}
+                          {'>'}Ze very fabric of financial reality bends to our
+                          will...
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-4 space-y-6 font-vt323">
+                      <div>
+                        <p className="text-white">
+                          <span className="text-red-500">IGOR</span> ID: 6537)
+                          01/18/25(THU)21:20:45
+                        </p>
+                        <p className="text-blue-400">No.1677665890</p>
+                        <div className="mt-2 text-green-400 whitespace-pre-line">
+                          {'>'}Tell us... did you really think ze Boyband twins
+                          would
+                          {'\n'}make ze greatest trade in quantum market
+                          history?
+                          {'\n'}
+                          {'>'}Ze very fabric of financial reality bends to our
+                          will...
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-4 space-y-6 font-vt323">
+                      <div>
+                        <p className="text-white">
+                          <span className="text-red-500">IGOR</span> ID: 6537)
+                          01/18/25(THU)21:20:45
+                        </p>
+                        <p className="text-blue-400">No.1677665890</p>
+                        <div className="mt-2 text-green-400 whitespace-pre-line">
+                          {'>'}Tell us... did you really think ze Boyband twins
+                          would
+                          {'\n'}make ze greatest trade in quantum market
+                          history?
+                          {'\n'}
+                          {'>'}Ze very fabric of financial reality bends to our
+                          will...
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+
+                <div className="absolute -top-[0.85rem] -left-2 text-white font-extrabold">
+                  +
+                </div>
+                <div className="absolute top-[1.7rem] -left-2 text-white font-extrabold">
+                  +
+                </div>
+                <div className="absolute -top-[0.85rem] -right-2 text-white font-extrabold">
+                  +
+                </div>
+                <div className="absolute top-[1.7rem] -right-2 text-white font-extrabold">
+                  +
+                </div>
+                <div className="hidden xl:block absolute -bottom-5 -left-2 text-white font-extrabold">
+                  +
+                </div>
+                <div className="hidden xl:block absolute -bottom-5 -right-2 text-white font-extrabold">
+                  +
+                </div>
               </div>
 
-              <div className="mt-9 relative w-full h-full bg-black shadow-xl text-white font-vt323 ">
+              <div className="relative w-full bg-black shadow-xl text-white font-vt323">
                 <div className="w-full border-y p-2 flex items-center gap-2">
                   <input
                     placeholder="Type your message here... (use '>' for greentext)"
-                    className=" !bg-black text-white border w-full p-2 h-12 text-xs"
+                    className="bg-black text-white border w-full p-2 h-12 text-xs"
                   />
-
-                  <div className="border flex items-center justify-center w-[3rem] h-[3rem]">
+                  <div className="border flex items-center justify-center w-12 h-12">
                     <Image
                       src="/micIcon.svg"
                       alt=""
-                      width={38}
-                      height={31}
-                      className="w-[1.5rem] h-[1.5rem]"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6"
                     />
                   </div>
-                  <div className="border flex items-center justify-center w-[3rem] h-[3rem]">
+                  <div className="border flex items-center justify-center w-12 h-12">
                     <Image
                       src="/sendIcon.svg"
                       alt=""
-                      width={38}
-                      height={31}
-                      className="w-[1.5rem] h-[1.5rem]"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6"
                     />
                   </div>
                 </div>
@@ -158,10 +227,36 @@ const Page = () => {
                 </div>
               </div>
 
-              <div className="hidden xl:block mt-9 relative w-full h-full bg-black shadow-xl text-white font-vt323 ">
-                <div className="w-full border-y p-2 flex justify-end items-end text-gray-500 text-sm">
+              <div className="hidden xl:block relative w-full bg-black shadow-xl text-white font-vt323">
+                <div className="w-full border-y p-2 flex justify-end items-end text-gray-500 ">
                   <p>{'//'} SIMULATION RUNNING</p>
                 </div>
+
+                <div className="flex items-center justify-between py-1 pl-2 pr-4">
+                  <div className="flex flex-col gap-1">
+                    <div>
+                      <p>ALL SYSTEMS</p>
+                      <div className="flex items-center gap-2">
+                        <p>ONLINE</p>
+                        <div className="w-2 h-2 rounded-full bg-green-500" />
+                      </div>
+                    </div>
+                    <div>
+                      <p>SIMULATION</p>
+                      <div className="flex items-center gap-2">
+                        <p>RUNNING</p>
+                        <div className="w-2 h-2 rounded-full bg-green-500" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <p>CLICK HERE TO END SIMULATION</p>
+                    <button className="py-2 px-6 bg-[#dc4040] rounded-md hover:bg-[#dc4040a8]">
+                      STOP
+                    </button>
+                  </div>
+                </div>
+
                 <div className="absolute -top-[0.87rem] -left-2 text-white font-extrabold">
                   +
                 </div>
@@ -180,48 +275,28 @@ const Page = () => {
                 <div className="absolute -bottom-5 -right-2 text-white font-extrabold">
                   +
                 </div>
-
-                <div className="flex items-center justify-between py-2 pl-2 pr-7">
-                  <div>
-                    <div className="flex flex-col items-center gap-2">
-                      <div>
-                        <p>ALL SYSTEMS</p>
-
-                        <div className="flex items-center justify-between">
-                          <p>ONLINE</p>
-
-                          <div className="w-2 h-2 rounded-full bg-green-500" />
-                        </div>
-                      </div>
-
-                      <div>
-                        <p>SIMULATION</p>
-                        <div className="flex items-center justify-between">
-                          <p>RUNNING</p>
-
-                          <div className="w-2 h-2 rounded-full bg-green-500" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className=" flex items-center gap-5">
-                    <p>CLICK HERE TO END SIMULATION</p>
-
-                    <button className="py-3 px-8 bg-[#dc4040] rounded-md">
-                      STOP
-                    </button>
-                  </div>
-                </div>
               </div>
             </div>
 
-            <div className="w-full xl:w-[60%] h-full">
-              <div className="relative w-full h-full bg-black shadow-xl">
-                <div className="w-full border-y px-2 flex flex-col justify-end items-end text-gray-500 text-sm">
-                  <p>{'//'} AGENT INTERACTION</p>
-                  <p>FEED </p>
+            <div className="w-full xl:w-[60%] h-full flex flex-col gap-4">
+              <div className="relative w-full flex-1 bg-black shadow-xl">
+                <div className="h-full flex flex-col">
+                  <div className="w-full border-y px-2 flex flex-col justify-end items-end text-gray-500 ">
+                    <p>{'//'} AGENT INTERACTION</p>
+                    <p>FEED</p>
+                  </div>
+
+                  <div className="flex-1 relative h-full lg:min-h-[15rem] xl:h-full">
+                    <Image
+                      src="/agents.png"
+                      alt="Bogdanoff Agents"
+                      width={968}
+                      height={961}
+                      className="w-full h-full  object-contain absolute inset-0"
+                    />
+                  </div>
                 </div>
+
                 <div className="absolute -top-[0.83rem] -left-2 text-white font-extrabold">
                   +
                 </div>
@@ -234,32 +309,38 @@ const Page = () => {
                 <div className="absolute top-[1.7rem] -right-2 text-white font-extrabold">
                   +
                 </div>
-                <div className="absolute -bottom-3 -left-2 text-white font-extrabold">
+                <div className="hidden xl:block absolute -bottom-3 -left-2 text-white font-extrabold">
                   +
                 </div>
-                <div className="absolute -bottom-3 -right-2 text-white font-extrabold">
+                <div className="hidden xl:block absolute -bottom-3 -right-2 text-white font-extrabold">
                   +
-                </div>
-
-                <div className="p-4 relative ">
-                  <div>
-                    <Image
-                      src="/agents.png"
-                      alt="Bogdanoff Logo"
-                      width={968}
-                      height={961}
-                      className="w-full xl:min-h-[37rem]"
-                    />
-                  </div>
                 </div>
               </div>
 
-              <div className="mt-9 hidden xl:flex items-start gap-5  ">
-                <div className="relative w-full h-[39rem] overflow-y-scroll hide-scrollbar bg-black shadow-xl text-white z-20">
-                  <div className="w-full border-y px-2 flex flex-col justify-end items-end text-gray-500 text-sm">
-                    <p>{'//'} QUANTUM SURVEILLANCE</p>
-                    <p>FEED </p>
+              <div className="hidden xl:flex gap-4 h-[30rem] xl:pb-16">
+                <div className="relative w-1/2 bg-black shadow-xl text-white">
+                  <div className="absolute inset-0 flex flex-col">
+                    <div className="w-full border-y px-2 flex flex-col justify-end items-end text-gray-500 ">
+                      <p>{'//'} QUANTUM SURVEILLANCE</p>
+                      <p>FEED</p>
+                    </div>
+                    <div className="flex-1 overflow-y-auto hide-scrollbar">
+                      <div className="p-4 space-y-2 font-vt323">
+                        {Array(19)
+                          .fill(0)
+                          .map((_, i) => (
+                            <p key={i} className="text-blue-300">
+                              <span className="text-yellow-400">
+                                [1:28:21 PM]
+                              </span>{' '}
+                              Scanning for anomalies in the space-time
+                              continuum...
+                            </p>
+                          ))}
+                      </div>
+                    </div>
                   </div>
+
                   <div className="absolute -top-[0.85rem] -left-2 text-white font-extrabold">
                     +
                   </div>
@@ -277,53 +358,25 @@ const Page = () => {
                   </div>
                   <div className="absolute -bottom-5 -right-2 text-white font-extrabold">
                     +
-                  </div>
-
-                  <div className="p-4 mt-[2rem] font-vt323">
-                    <p className="text-blue-300">
-                      <span style={{ color: 'yellow' }}>[1:28:21 PM]</span> 
-                      Scanning for anomalies in the space-time continuum...
-                    </p>
-                    <p className="text-blue-300">
-                      <span style={{ color: 'yellow' }}>[1:28:21 PM]</span> 
-                      Scanning for anomalies in the space-time continuum...
-                    </p>
-                    <p className="text-blue-300">
-                      <span style={{ color: 'yellow' }}>[1:28:21 PM]</span> 
-                      Scanning for anomalies in the space-time continuum...
-                    </p>
-                    <p className="text-blue-300">
-                      <span style={{ color: 'yellow' }}>[1:28:21 PM]</span> 
-                      Scanning for anomalies in the space-time continuum...
-                    </p>
-                    <p className="text-blue-300">
-                      <span style={{ color: 'yellow' }}>[1:28:21 PM]</span> 
-                      Scanning for anomalies in the space-time continuum...
-                    </p>
-                    <p className="text-blue-300">
-                      <span style={{ color: 'yellow' }}>[1:28:21 PM]</span> 
-                      Scanning for anomalies in the space-time continuum...
-                    </p>
-                    <p className="text-blue-300">
-                      <span style={{ color: 'yellow' }}>[1:28:21 PM]</span> 
-                      Scanning for anomalies in the space-time continuum...
-                    </p>
-                    <p className="text-blue-300">
-                      <span style={{ color: 'yellow' }}>[1:28:21 PM]</span> 
-                      Scanning for anomalies in the space-time continuum...
-                    </p>
-                    <p className="text-blue-300">
-                      <span style={{ color: 'yellow' }}>[1:28:21 PM]</span> 
-                      Scanning for anomalies in the space-time continuum...
-                    </p>
                   </div>
                 </div>
 
-                <div className="relative w-full h-[39rem] bg-black shadow-xl text-white">
-                  <div className="w-full border-y px-2 flex flex-col justify-end items-end text-gray-500 text-sm">
-                    <p>{'//'} QUANTUM SURVEILLANCE</p>
-                    <p>FEED </p>
+                <div className="relative w-1/2 bg-black shadow-xl text-white">
+                  <div className="h-full flex flex-col">
+                    <div className="w-full border-y px-2 flex flex-col justify-end items-end text-gray-500 ">
+                      <p>{'//'} QUANTUM SURVEILLANCE</p>
+                      <p>FEED</p>
+                    </div>
+                    <div className="flex-1 p-4">
+                      <div className="flex flex-col items-end justify-center h-full font-vt323">
+                        <p>[DOCUMENT CLASS: QUANTAM CLEARANCE]</p>
+                        <p>[BOGDANOFF RESEARCH PROTOCOL 7749]</p>
+                        <p>[TIMELINE MANIPULATION MANUAL v2.025]</p>
+                        <p>[CAUTION: MEMETIC HAZARD PRESENT]</p>
+                      </div>
+                    </div>
                   </div>
+
                   <div className="absolute -top-[0.85rem] -left-2 text-white font-extrabold">
                     +
                   </div>
@@ -341,13 +394,6 @@ const Page = () => {
                   </div>
                   <div className="absolute -bottom-5 -right-2 text-white font-extrabold">
                     +
-                  </div>
-
-                  <div className="p-4 flex flex-col justify-end items-end font-vt323">
-                    <p>[DOCUMENT CLASS: QUANTAM CLEARANCE]</p>
-                    <p>[BOGDANOFF RESEARCH PROTOCOL 7749]</p>
-                    <p>[TIMELINE MANIPULATION MANUAL v2.025]</p>
-                    <p>[CAUTION: MEMETIC HAZARD PRESENT]</p>
                   </div>
                 </div>
               </div>

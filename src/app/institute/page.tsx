@@ -14,7 +14,7 @@ const Page = () => {
 
   return (
     <ClientLayout>
-      <div className="w-full px-2 xl:px-4 pb-9">
+      <div className="w-full px-2 xl:px-4 pb-9 font-mono text-xs">
         <div className="mt-9 xl:mt-[8rem] w-full flex flex-col xl:flex-row items-center gap-8">
           <div className="w-full xl:w-[65%] h-auto xl:h-[35rem] border border-blue-400 rounded-2xl overflow-hidden">
             <Image
@@ -26,7 +26,7 @@ const Page = () => {
             />
           </div>
 
-          <div className="w-full xl:w-[35%] h-auto xl:h-[35rem] bg-gradient-to-r from-white to-[#d8faff] backdrop-blur-sm rounded-2xl text-black flex flex-col gap-12 items-center justify-center py-4 px-7 xl:px-12 text-sm md:text-lg font-source-sans-pro">
+          <div className="w-full xl:w-[35%] h-auto xl:h-[35rem] bg-gradient-to-r from-white to-[#d8faff] backdrop-blur-sm rounded-2xl text-black flex flex-col gap-12 items-center justify-center py-4 px-7 xl:px-12  font-source-sans-pro">
             <p>
               Welcome to ze pinnacle of quantum-memetic research. At ze
               Bogdanoff Institute, we&#39;ve transcended traditional market
@@ -40,14 +40,14 @@ const Page = () => {
               and timeline manipulation.
             </p>
 
-            <button className=" mt-9 bg-black w-full p-2 text-white">
+            <button className=" mt-9 bg-black w-full p-2 text-white text-[1rem] font-bold">
               BUY $BOGDANOFF
             </button>
           </div>
         </div>
 
         <div className="w-full mt-[4rem] xl:mt-[6rem]">
-          <div className="w-full mb-1 flex flex-col items-end justify-end text-sm md:text-lg font-mono">
+          <div className="w-full mb-1 flex flex-col items-end justify-end font-mono">
             <p className="text-gray-500">{'//'} RESEARCH</p>
             <p> PILLARS</p>
           </div>
@@ -58,7 +58,7 @@ const Page = () => {
                 key={index}
                 title={detail.title}
                 moreDetail={detail.moreDetail}
-                list={detail?.list}
+                lists={detail?.lists}
                 isExpanded={isResearchExpanded}
                 setIsExpanded={setIsResearchExpanded}
                 sectionType="research"
@@ -91,7 +91,7 @@ const Page = () => {
                 key={index}
                 title={detail.title}
                 moreDetail={detail.moreDetail}
-                list={detail?.list}
+                lists={detail?.lists}
                 isExpanded={isAcademicExpanded}
                 setIsExpanded={setIsAcademicExpanded}
                 sectionType="academic"

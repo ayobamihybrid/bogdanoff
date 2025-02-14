@@ -47,10 +47,10 @@ const Card: React.FC<CardProps> = ({
   };
 
   return (
-    <Tilt className="relative">
+    <Tilt className="relative font-mono">
       {status && <StatusBadge {...status} />}
       <div
-        className={` bg-white/90 rounded-xl p-3 xl:p-5 flex flex-col justify-between min-h-[13rem] xl:min-h-[17.5rem] ${
+        className={` bg-white/90 rounded-xl p-3 xl:p-5 flex flex-col justify-between h-[12rem] ${
           status ? 'mt-[4.2rem] lg:mt-[5rem] xl:mt-0' : ''
         }`}
       >
@@ -72,16 +72,16 @@ const Card: React.FC<CardProps> = ({
                   alt=""
                   width={38}
                   height={31}
-                  className="w-9 h-9"
+                  className="w-8 h-8 "
                 />
               </div>
             ))}
           </div>
 
           <button
-            className={`px-4 py-2 font-mono text-sm font-bold ${
+            className={`px-4 lg:px-2 py-2 font-mono text-[1rem] font-bold ${
               buttonText === 'BUY BOGDANOFF'
-                ? 'bg-yellow-200 text-black py-3 xl:py-4'
+                ? 'bg-yellow-200 text-black py-3 xl:py-4 text-sm'
                 : 'bg-black text-white'
             }`}
             onClick={handleClick}

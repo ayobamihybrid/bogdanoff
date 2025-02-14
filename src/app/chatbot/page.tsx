@@ -193,7 +193,7 @@ const Page = () => {
                     placeholder="Type your message here... (use '>' for greentext)"
                     className="bg-black text-white border w-full p-2 h-12 text-xs"
                   />
-                  <div className="border flex items-center justify-center w-12 h-12">
+                  <div className="border border-green-400 flex items-center justify-center w-12 h-12 shadow-lg shadow-green-500/50 hover:shadow-green-400/75 transition-shadow duration-300 cursor-pointer rounded-lg">
                     <Image
                       src="/micIcon.svg"
                       alt=""
@@ -202,7 +202,7 @@ const Page = () => {
                       className="w-6 h-6"
                     />
                   </div>
-                  <div className="border flex items-center justify-center w-12 h-12">
+                  <div className="border border-green-400 flex items-center justify-center w-12 h-12 shadow-lg shadow-green-500/50 hover:shadow-green-400/75 transition-shadow duration-300 cursor-pointer rounded-lg">
                     <Image
                       src="/sendIcon.svg"
                       alt=""
@@ -286,13 +286,13 @@ const Page = () => {
                     <p>FEED</p>
                   </div>
 
-                  <div className="flex-1 relative h-full lg:min-h-[15rem] xl:h-full">
+                  <div className="flex-1 relative h-full lg:min-h-[15rem] xl:min-h-[20rem]">
                     <Image
                       src="/agents.png"
                       alt="Bogdanoff Agents"
                       width={968}
                       height={961}
-                      className="w-full h-full  object-contain absolute inset-0"
+                      className="w-full h-full object-contain absolute inset-0"
                     />
                   </div>
                 </div>

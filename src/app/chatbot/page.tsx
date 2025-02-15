@@ -193,7 +193,7 @@ const Page = () => {
                     placeholder="Type your message here... (use '>' for greentext)"
                     className="bg-black text-white border w-full p-2 h-12 text-xs"
                   />
-                  <div className="border border-green-400 flex items-center justify-center w-12 h-12 shadow-lg shadow-green-500/50 hover:shadow-green-400/75 transition-shadow duration-300 cursor-pointer rounded-lg">
+                  <div className="border border-green-400 flex items-center justify-center w-20 h-12 shadow-lg shadow-green-500/50 hover:shadow-green-400/75 transition-shadow duration-300 cursor-pointer ">
                     <Image
                       src="/micIcon.svg"
                       alt=""
@@ -202,7 +202,7 @@ const Page = () => {
                       className="w-6 h-6"
                     />
                   </div>
-                  <div className="border border-green-400 flex items-center justify-center w-12 h-12 shadow-lg shadow-green-500/50 hover:shadow-green-400/75 transition-shadow duration-300 cursor-pointer rounded-lg">
+                  <div className="border border-green-400 flex items-center justify-center w-20 h-12 shadow-lg shadow-green-500/50 hover:shadow-green-400/75 transition-shadow duration-300 cursor-pointer ">
                     <Image
                       src="/sendIcon.svg"
                       alt=""
@@ -251,7 +251,7 @@ const Page = () => {
                   </div>
                   <div className="flex items-center gap-4">
                     <p>CLICK HERE TO END SIMULATION</p>
-                    <button className="py-2 px-6 bg-[#dc4040] rounded-md hover:bg-[#dc4040a8]">
+                    <button className="py-2 px-6 bg-[#dc4040] hover:bg-[#dc4040a8]">
                       STOP
                     </button>
                   </div>

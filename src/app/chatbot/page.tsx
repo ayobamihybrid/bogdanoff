@@ -191,7 +191,7 @@ const Page = () => {
                 <div className="w-full border-y p-2 flex items-center gap-2">
                   <input
                     placeholder="Type your message here... (use '>' for greentext)"
-                    className="bg-black text-white border w-full p-2 h-12 text-xs"
+                    className="bg-black text-white border w-full p-2 h-12 text-xs rounded-none"
                   />
                   <div className="border border-green-400 flex items-center justify-center w-20 h-12 shadow-lg shadow-green-500/50 hover:shadow-green-400/75 transition-shadow duration-300 cursor-pointer ">
                     <Image

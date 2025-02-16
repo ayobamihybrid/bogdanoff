@@ -40,10 +40,11 @@ body {
   }
 }
 
-html.chatbot-page,
-body.chatbot-page {
-  margin: 0;
-  height: 100vh;
-  overflow: hidden;
-  margin: auto;
+@media (min-width: 1024px) {
+  html.chatbot-page,
+  body.chatbot-page {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
 }

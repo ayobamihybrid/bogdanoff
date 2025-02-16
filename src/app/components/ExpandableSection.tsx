@@ -84,8 +84,10 @@ const ExpandableSection: React.FC<ExpandableProps> = ({
             LEARN MORE
           </div>
           <div
-            className={`overflow-hidden transition-all duration-300 ease-in-out ${
-              shouldExpand ? 'max-h-96 xl:h-40' : 'max-h-0'
+            className={`overflow-hidden overflow-y-scroll hide-scrollbar transition-all duration-300 ease-in-out ${
+              shouldExpand
+                ? `max-h-96 ${imageSource ? 'xl:h-72' : 'xl:h-40'}`
+                : 'max-h-0'
             }`}
           >
             <p className="mt-4 text-start">{moreDetail}</p>

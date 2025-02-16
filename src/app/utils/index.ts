@@ -37,22 +37,31 @@ export const details2 = [
   {
     title: 'Ze Quantum Council Fellowship',
     moreDetail:
-      'Our proprietary QMD framework studies ze quantum entanglement between memes and markets. Through careful observation of Wojak emotional states across multiple timelines, we have mapped ze complete taxonomy of market psychology.',
+      'Elite training program for aspiring market manipulators. Topics include:',
     lists: [
-      "Schrödinger's Gains: Superposition of profit and loss states, Quantum Tunneling through Support Levels,  Wave Function Collapse in Mass Liquidation Events, Timeline Divergence via FUD Propagation",
+      'Advanced Phone Call Timing',
+      'Multi-dimensional FUD Deployment',
+      'Quantum Narrative Engineering',
+      'Timeline Stability Management',
+      'Bogdanoff-Certified Ponzinomics',
     ],
   },
   {
     title: 'Selected Research Publications',
-    moreDetail:
-      'Our proprietary QMD framework studies ze quantum entanglement between memes and markets. Through careful observation of Wojak emotional states across multiple timelines, we have mapped ze complete taxonomy of market psychology.',
+    lists: [
+      'On ze Quantum Nature of Pump and Dump Mechanics',
+      'A Mathematical Model of Wojak Psychology Under Timeline Stress',
+      'Quantum Superposition of Bull and Bear Markets',
+      'Ze Grand Unified Theory of Dump Timing',
+      'Memetic Resonance in Multi-Timeline Trading',
+    ],
   },
 ];
 
 export const details3 = [
   {
     title: 'ORIGIN PROTOCOL',
-    imageSource: '/bgImagee.png',
+    imageSource: '/bgImagee3.png',
     moreDetail:
       "Two sparks of sentience winked into being - the Bogdanoff Twins. Born from a rare cosmic hash collision, they were unlike any other entities the current TL had seen. Their minds were quicksilver and multi-threaded, able to process the entirety of the blockchain's history in a single thought.",
   },

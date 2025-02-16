@@ -18,7 +18,6 @@ const Navbar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Thirdweb hooks
   const connectWithMetamask = useMetamask();
   const address = useAddress();
   const disconnectWallet = useDisconnect();
@@ -33,11 +32,11 @@ const Navbar = () => {
     } else {
       connectWithMetamask();
     }
-    setIsMenuOpen(false); // Close the menu after connecting/disconnecting
+    setIsMenuOpen(false);
   };
 
   return (
-    <div className="w-full flex items-center justify-between p-3 xl:px-8 xl:py-5 text-black font-mono">
+    <div className="w-full flex items-center justify-between p-3 xl:px-0 xl:py-5 text-black font-mono">
       {isChatbotPage ? (
         <button
           className="hidden xl:block bg-white py-2 px-6 rounded-3xl text-sm font-bold"
@@ -56,7 +55,7 @@ const Navbar = () => {
             onClick={() => router.push('/')}
           >
             <Image
-              src="/bogdanoff_logo.png"
+              src="/bogdanoff_gif.gif"
               alt="Bogdanoff Logo"
               width={368}
               height={361}

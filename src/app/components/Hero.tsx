@@ -11,15 +11,15 @@ const Hero = () => {
         <div className="flex flex-col items-center xl:items-start w-full">
           <div className="relative">
             <Image
-              src="/bogdanoff_logo.png"
+              src="/bogdanoff_gif.gif"
               alt="Bogdanoff Logo"
               width={368}
               height={361}
-              className="w-48 sm:w-64 xl:w-[32.5rem] h-auto"
+              className="w-72 sm:w-80 md:w-96 xl:w-[33rem] h-auto"
             />
           </div>
 
-          <div className="-mt-3 xl:-mt-6 ml-8 sm:ml-12 xl:ml-[16rem] bg-white rounded-3xl py-1 sm:py-2 px-3 sm:px-4">
+          <div className="-mt-3 md:-mt-4 xl:-mt-6 ml-12 xl:ml-[12rem] bg-white rounded-3xl py-1 sm:py-2 px-3 sm:px-4">
             <p className="tracking-[0.5em] sm:tracking-[1em] text-sm xl:text-lg font-bold">
               SIMULATOR
             </p>

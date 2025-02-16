@@ -39,3 +39,11 @@ body {
     margin: 0 !important;
   }
 }
+
+html.chatbot-page,
+body.chatbot-page {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  margin: auto;
+}

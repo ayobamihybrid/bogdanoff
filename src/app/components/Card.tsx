@@ -47,50 +47,52 @@ const Card: React.FC<CardProps> = ({
   };
 
   return (
-    <Tilt className="relative font-mono">
-      {status && <StatusBadge {...status} />}
-      <div
-        className={` bg-white/90 rounded-xl p-3 xl:p-5 flex flex-col justify-between h-[12rem] ${
-          status ? 'mt-[4.2rem] lg:mt-[5rem] xl:mt-0' : ''
-        }`}
-      >
-        <div className="space-y-2">
-          <p className="text-sm font-mono uppercase">{title}</p>
-          <p className="text-lg font-mono font-bold tracking-wider">
-            {subtitle}
-          </p>
-        </div>
-        <div className="flex justify-between gap-1 items-center">
-          <div className="flex gap-1 xl:gap-2">
-            {icons.map((icon, index) => (
-              <div
-                key={index}
-                className=" bg-black p-1 xl:p-2 flex items-center justify-center"
-              >
-                <Image
-                  src={icon}
-                  alt=""
-                  width={38}
-                  height={31}
-                  className="w-8 h-8 "
-                />
-              </div>
-            ))}
+    <div className="relative font-mono">
+      <Tilt>{status && <StatusBadge {...status} />}</Tilt>
+      <Tilt>
+        <div
+          className={` bg-white/90 rounded-xl p-3 xl:p-5 flex flex-col justify-between h-[12rem] ${
+            status ? 'mt-[4.2rem] lg:mt-[5rem] xl:mt-0' : ''
+          }`}
+        >
+          <div className="space-y-2">
+            <p className="text-sm font-mono uppercase">{title}</p>
+            <p className="text-lg font-mono font-bold tracking-wider">
+              {subtitle}
+            </p>
           </div>
+          <div className="flex justify-between gap-1 items-center">
+            <div className="flex gap-1 xl:gap-2">
+              {icons.map((icon, index) => (
+                <div
+                  key={index}
+                  className=" bg-black p-1 xl:p-2 flex items-center justify-center"
+                >
+                  <Image
+                    src={icon}
+                    alt=""
+                    width={38}
+                    height={31}
+                    className="w-8 h-8 "
+                  />
+                </div>
+              ))}
+            </div>
 
-          <button
-            className={`px-4 lg:px-2 py-2 font-mono text-[1rem] font-bold ${
-              buttonText === 'BUY BOGDANOFF'
-                ? 'bg-yellow-200 text-black py-3 xl:py-4 text-sm'
-                : 'bg-black text-white'
-            }`}
-            onClick={handleClick}
-          >
-            {buttonText}
-          </button>
+            <button
+              className={`px-4 lg:px-2 py-2 font-mono text-[1rem] font-bold ${
+                buttonText === 'BUY BOGDANOFF'
+                  ? 'bg-yellow-200 text-black py-3 xl:py-4 text-sm'
+                  : 'bg-black text-white'
+              }`}
+              onClick={handleClick}
+            >
+              {buttonText}
+            </button>
+          </div>
         </div>
-      </div>
-    </Tilt>
+      </Tilt>
+    </div>
   );
 };
 

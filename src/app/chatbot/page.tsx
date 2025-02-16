@@ -1,15 +1,24 @@
-// Page.tsx for Chatbot
 'use client';
 
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect } from 'react';
 import ClientLayout from '../ClientLayout';
 
 const Page = () => {
+  useEffect(() => {
+    document.documentElement.classList.add('chatbot-page');
+    document.body.classList.add('chatbot-page');
+
+    return () => {
+      document.documentElement.classList.remove('chatbot-page');
+      document.body.classList.remove('chatbot-page');
+    };
+  }, []);
+
   return (
     <ClientLayout>
-      <div className="my-3 border rounded-xl border-gray-600 h-[calc(100vh-theme(spacing.24))] font-vt323 text-sm ">
-        <div className="h-full bg-[url('/Rectangle.png')] bg-brown-500/50 bg-cover bg-center w-full text-black">
+      <div className="mt-3 border rounded-xl border-gray-600 font-vt323 text-sm">
+        <div className="h-[calc(100vh-theme(spacing.28))] bg-[url('/Rectangle.png')] bg-brown-500/50 bg-cover bg-center w-full text-black">
           <div className="h-full w-full flex flex-col-reverse xl:flex-row items-start gap-4 xl:gap-6 p-4">
             <div className="w-full xl:w-[40%] h-full flex flex-col gap-3 pb-4 xl:pb-16">
               <div className="relative w-full flex-1 bg-black shadow-xl ">
@@ -193,7 +202,7 @@ const Page = () => {
                     placeholder="Type your message here... (use '>' for greentext)"
                     className="bg-black text-white border w-full p-2 h-12 text-xs rounded-none"
                   />
-                  <div className="border border-green-400 flex items-center justify-center w-20 h-12 shadow-lg shadow-green-500/50 hover:shadow-green-400/75 transition-shadow duration-300 cursor-pointer ">
+                  <div className="border border-white flex items-center justify-center w-20 h-12 shadow-lg shadow-white/50 hover:shadow-white/75 transition-shadow duration-300 cursor-pointer">
                     <Image
                       src="/micIcon.svg"
                       alt=""
@@ -202,7 +211,7 @@ const Page = () => {
                       className="w-6 h-6"
                     />
                   </div>
-                  <div className="border border-green-400 flex items-center justify-center w-20 h-12 shadow-lg shadow-green-500/50 hover:shadow-green-400/75 transition-shadow duration-300 cursor-pointer ">
+                  <div className="border border-white flex items-center justify-center w-20 h-12 shadow-lg shadow-white/50 hover:shadow-white/75 transition-shadow duration-300 cursor-pointer">
                     <Image
                       src="/sendIcon.svg"
                       alt=""
@@ -317,7 +326,7 @@ const Page = () => {
                 </div>
               </div>
 
-              <div className="hidden xl:flex gap-4 h-[30rem] xl:pb-16">
+              <div className="hidden xl:flex gap-4 h-1/3 xl:pb-16">
                 <div className="relative w-1/2 bg-black shadow-xl text-white">
                   <div className="absolute inset-0 flex flex-col">
                     <div className="w-full border-y px-2 flex flex-col justify-end items-end text-gray-500 ">
@@ -367,7 +376,7 @@ const Page = () => {
                       <p>{'//'} QUANTUM SURVEILLANCE</p>
                       <p>FEED</p>
                     </div>
-                    <div className="flex-1 p-4">
+                    <div className="flex-1 p-4 overflow-y-auto hide-scrollbar">
                       <div className="flex flex-col items-end justify-center h-full font-vt323">
                         <p>[DOCUMENT CLASS: QUANTAM CLEARANCE]</p>
                         <p>[BOGDANOFF RESEARCH PROTOCOL 7749]</p>

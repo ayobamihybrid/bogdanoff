@@ -20,7 +20,7 @@ const Page = () => {
       <div className="mt-3 border rounded-xl border-gray-600 font-vt323 text-sm">
         <div className="h-[calc(100vh-theme(spacing.28))] bg-[url('/Rectangle.png')] bg-brown-500/50 bg-cover bg-center w-full text-black">
           <div className="h-full w-full flex flex-col-reverse xl:flex-row items-start gap-4 xl:gap-6 p-4">
-            <div className="w-full xl:w-[40%] h-full flex flex-col gap-3 pb-4 xl:pb-16">
+            <div className="w-full xl:w-[40%] h-full flex flex-col gap-3 xl:pb-16">
               <div className="relative w-full flex-1 bg-black shadow-xl ">
                 <div className="absolute inset-0 flex flex-col">
                   <div className="w-full border-y px-2 flex flex-col justify-end items-end text-gray-500 ">

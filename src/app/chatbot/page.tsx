@@ -301,7 +301,7 @@ const Page = () => {
                       alt="Bogdanoff Agents"
                       width={968}
                       height={961}
-                      className="w-full h-full object-contain absolute inset-0"
+                      className="min-w-full h-full object-cover absolute inset-0"
                     />
                   </div>
                 </div>

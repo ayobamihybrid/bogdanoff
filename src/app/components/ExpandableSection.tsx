@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 
 interface ExpandableProps {
   title: string;
-  moreDetail: string;
+  moreDetail?: string;
   lists?: string[];
   imageSource?: string;
   isExpanded?: boolean;
